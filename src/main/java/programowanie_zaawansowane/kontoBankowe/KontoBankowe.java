@@ -1,6 +1,6 @@
 package programowanie_zaawansowane.kontoBankowe;
 
-public class KontoBankowe {
+public class KontoBankowe extends Object {
 
     public long numerKonta;
     public int stanKonta;
@@ -24,5 +24,5 @@ public class KontoBankowe {
         return kwotaDoWyplaty;
     }
 
-   
+
 }
