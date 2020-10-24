@@ -1,5 +1,7 @@
 package programowanie_zaawansowane.dziedziczenie;
 
+import java.util.Objects;
+
 public class Samochod {
 
     protected String kolor;
@@ -44,12 +46,16 @@ public class Samochod {
 
     @Override
     public boolean equals(Object o) {
-        Samochod that = (Samochod) o;
-        if (this.kolor.equals(that.kolor) && this.marka.equals(that.marka) && this.rocznik == that.rocznik) {
-            return true;
-        } else {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Samochod samochod = (Samochod) o;
+        return rocznik == samochod.rocznik &&
+                Objects.equals(marka, samochod.marka); // to jest tozsamy zapis z:
+               // marka.equals(samochod.marka);
+    }
 
+    @Override
+    public int hashCode() {
+        return 17 * marka.hashCode() + 31 * rocznik + 7 * kolor.hashCode();
     }
 }
