@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.typy_generyczne;
+package programowanie_zaawansowane.typy_generyczne.zadanie1;
 
 public class Porshe extends Samochod {
 
