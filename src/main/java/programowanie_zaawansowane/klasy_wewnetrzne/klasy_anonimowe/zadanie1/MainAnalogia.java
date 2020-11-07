@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.klasy_wewnetrzne.klasy_anonimowe;
+package programowanie_zaawansowane.klasy_wewnetrzne.klasy_anonimowe.zadanie1;
 
 public class MainAnalogia {
     public static void main(String[] args) {

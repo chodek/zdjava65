@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.klasy_wewnetrzne.klasy_anonimowe;
+package programowanie_zaawansowane.klasy_wewnetrzne.klasy_anonimowe.zadanie1;
 
 public class AnonymousClasses {
     public static class Robot {
@@ -31,7 +31,15 @@ public class AnonymousClasses {
             }
         });
 
+        Robot hans = new Robot(new GreetingModule() {
+            @Override
+            public void sayHello() {
+                System.out.println("guten tag");
+            }
+        });
+
         jan.saySomething();
         john.saySomething();
+        hans.saySomething();
     }
 }
