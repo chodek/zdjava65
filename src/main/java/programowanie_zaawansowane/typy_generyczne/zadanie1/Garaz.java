@@ -23,7 +23,7 @@ public class Garaz<T> {
         }
     }
 
-    public T wyprowadz(T autoDoWyprowadzenia) {
+    public T wyprowadz(T autoDoWyprowadzenia) throws CarNotFoundException{
         if (autoDoWyprowadzenia.equals(pierwszy)) {
             T temp = pierwszy;
             pierwszy = null;
@@ -32,8 +32,8 @@ public class Garaz<T> {
             T temp = drugi;
             drugi = null;
             return temp;
+        } else {
+            throw new CarNotFoundException("Brak takiego poajazdu w garażu - " + autoDoWyprowadzenia);
         }
-        System.out.println("Nie ma takiego auta w garazu");
-        return autoDoWyprowadzenia;
     }
 }
